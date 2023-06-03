@@ -43,7 +43,7 @@ def main():
     st.header("Upload File")
     file_types = ["mp4", "docx", "pdf"]
     file = st.file_uploader("Choose a file", type=file_types)
-    file_description = st.text_input("Enter a description for the file")
+    file_description = st.text_input("Enter Vehicle Number and Description")
     if file is not None:
         file_id = save_file(file, file_description)
         share_link = get_share_link(file_id)
