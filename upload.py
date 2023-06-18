@@ -40,10 +40,10 @@ def main():
     st.title("Pragathi Motors Evidence collector")
 
     # File upload section
+    file_description = st.text_input("Enter Vehicle Number and Description")
     st.header("Upload File")
     file_types = ["mp4", "docx", "pdf"]
     file = st.file_uploader("Choose a file", type=file_types)
-    file_description = st.text_input("Enter Vehicle Number and Description")
     if file is not None:
         file_id = save_file(file, file_description)
         share_link = get_share_link(file_id)
@@ -84,6 +84,6 @@ def get_share_link(file_id):
 if __name__ == "__main__":
     main()
     st.write("Developed by [yashtech.Inc](https://yashtech.xyz/)")
-    increment = st.button('Refresh')
-    if increment:
-        count += 1
+    # increment = st.button('Refresh')
+    # if increment:
+    #     count += 1
