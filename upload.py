@@ -61,7 +61,7 @@ def save_file(file, description):
     gfile = drive.CreateFile({'title': file_name, 'description': description})
     gfile.SetContentFile(file_path)
     gfile.Upload()
-    st.success("File uploaded successfully!")
+    st.success("File uploaded successfully!, Check your email id for more details")
     return gfile['id']
 
 # Get shareable link for file from Google Drive
