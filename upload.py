@@ -42,7 +42,7 @@ def main():
     # File upload section
     file_description = st.text_input("Enter Vehicle Number and Description")
     st.header("Upload File")
-    file_types = ["mp4", "docx", "pdf"]
+    file_types = ["mp4", "docx", "pdf","jpg","heic","jpeg"]
     file = st.file_uploader("Choose a file", type=file_types)
     if file is not None:
         file_id = save_file(file, file_description)
